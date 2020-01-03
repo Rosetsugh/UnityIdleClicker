@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scenes\Scripts\gameBoss.cs" />
      <Compile Include="Assets\Scenes\Scripts\Store.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Git/UnityIdleClicker/UnityIdleClicker/IdleClicker/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
