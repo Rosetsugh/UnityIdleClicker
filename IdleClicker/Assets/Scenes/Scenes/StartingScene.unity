@@ -301,7 +301,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 275793729}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2102105398}
+        m_MethodName: BuyStoreOnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &275793729
@@ -823,6 +834,7 @@ GameObject:
   - component: {fileID: 2102105395}
   - component: {fileID: 2102105397}
   - component: {fileID: 2102105396}
+  - component: {fileID: 2102105398}
   m_Layer: 5
   m_Name: LemonadeStandPanel
   m_TagString: Untagged
@@ -889,3 +901,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102105394}
   m_CullTransparentMesh: 0
+--- !u!114 &2102105398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102105394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d49409825af5bb4bbef6e49c9890457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeCountText: {fileID: 1347882282}
+  currentBalanceText: {fileID: 0}
