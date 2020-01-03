@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 188111631}
   - component: {fileID: 188111630}
   - component: {fileID: 188111629}
-  - component: {fileID: 188111633}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -257,19 +256,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &188111633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188111628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152da96883decae459bcd9db4880bb56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentBalanceText: {fileID: 392883117}
 --- !u!1 &275793726
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +269,7 @@ GameObject:
   - component: {fileID: 275793729}
   - component: {fileID: 275793728}
   m_Layer: 5
-  m_Name: LemonadeStandButton
+  m_Name: StoreButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -329,11 +315,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.116144516, g: 0.8207547, b: 0.18645059, a: 1}
+    m_HighlightedColor: {r: 0.15379138, g: 0.6792453, b: 0.58594316, a: 1}
+    m_PressedColor: {r: 0.9245283, g: 0.06977572, b: 0.06977572, a: 1}
+    m_SelectedColor: {r: 0.11764706, g: 0.81960785, b: 0.1882353, a: 1}
+    m_DisabledColor: {r: 0.8490566, g: 0.040049832, b: 0.040049832, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -378,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.11764706, g: 0.81960785, b: 0.1882353, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -598,10 +584,10 @@ RectTransform:
   m_Father: {fileID: 2102105395}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -59.800003, y: 1.5651016}
-  m_SizeDelta: {x: -160.89, y: -70.4}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 46.699997, y: -45.4349}
+  m_SizeDelta: {x: 52.11, y: 23.599998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389804965
 MonoBehaviour:
@@ -872,7 +858,7 @@ GameObject:
   - component: {fileID: 651441107}
   - component: {fileID: 651441106}
   m_Layer: 5
-  m_Name: LemonadeStandTitle
+  m_Name: StoreTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,7 +1013,7 @@ GameObject:
   - component: {fileID: 1347882283}
   - component: {fileID: 1347882282}
   m_Layer: 5
-  m_Name: LemonadeCount
+  m_Name: StoreCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1195,6 +1181,50 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1892222254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892222256}
+  - component: {fileID: 1892222255}
+  m_Layer: 0
+  m_Name: GameManagerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1892222255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892222254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 152da96883decae459bcd9db4880bb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBalanceText: {fileID: 392883117}
+--- !u!4 &1892222256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892222254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 533.08936, y: 223.83025, z: -793.28455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999094124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.0864455, y: 0.5653158}
   m_AnchorMax: {x: 0.3435545, y: 0.7663685}
-  m_AnchoredPosition: {x: -2.8999925, y: 1.5}
+  m_AnchoredPosition: {x: -2.899994, y: 34}
   m_SizeDelta: {x: -4, y: -1.3999939}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!114 &2102105396
@@ -1427,5 +1457,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d49409825af5bb4bbef6e49c9890457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseStoreCost: 2
+  baseStoreProfit: 0.75
+  storeTimer: 3
+  isManagerUnlocked: 1
+  storeCount: 1
+  storeMultiplier: 1.02
   storeCountText: {fileID: 1347882282}
   progressSlider: {fileID: 1484363582}
+  storeButtonCostText: {fileID: 360541322}
+  gameManager: {fileID: 1892222255}
+  buyButton: {fileID: 275793728}

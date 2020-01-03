@@ -6,23 +6,29 @@ using UnityEngine.UI;
 
 public class Store : MonoBehaviour 
 {
-    float baseStoreCost;
-    float baseStoreProfit;
+    //Public variables Define gameplay
+    public float baseStoreCost;
+    public float baseStoreProfit;
+    public float storeTimer = 4f;
+    public bool isManagerUnlocked;
+    public int storeCount;
+    public float storeMultiplier;
 
-    private int storeCount;
+    private bool startTimer;
+    private float currentTimer = 0f;
+    private float nextStoreCost;    
+
     public Text storeCountText;
-    public Slider progressSlider; 
-
-    float storeTimer = 4f;
-    float currentTimer = 0f;
-    bool startTimer;
+    public Slider progressSlider;
+    public Text storeButtonCostText;
     public gameBoss gameManager;
+    public Button buyButton;
 
     void Start()
     {
-        storeCount = 1;
-        baseStoreProfit = .5f;
-        baseStoreCost = 1.50f; 
+        storeCountText.text = storeCount.ToString();
+        nextStoreCost = baseStoreCost;
+        storeButtonCostText.text = "Buy " + nextStoreCost.ToString("C2");
     }
 
     void Update()
@@ -30,29 +36,49 @@ public class Store : MonoBehaviour
         if (startTimer)
         {
             currentTimer += Time.deltaTime;
-            if (currentTimer > storeTimer)
+            if (currentTimer >= storeTimer)
             {
-                currentTimer = 0;
+                currentTimer = 0;                
                 startTimer = false;
                 float amount = baseStoreProfit * storeCount;
                 gameManager.AddToBalance(amount); 
+                if (isManagerUnlocked)                
+                    startTimer = true;                
             }
         }
         progressSlider.value = currentTimer / storeTimer;
+        CheckStoreBuy();
     }
+    public void CheckStoreBuy ()
+    {
+        if(gameManager.CanBuy(nextStoreCost))
+        {
+            buyButton.interactable = true;
+        } else
+        {
+            buyButton.interactable = false;
+        }
+    }
+
 
     public void BuyStoreOnClick ()
     {
-        if(baseStoreCost > gameManager.CurrentBalance())
-            return;
-
-        storeCount += 1;
-        storeCountText.text = storeCount.ToString();
-        gameManager.SubtractFromBalance(baseStoreCost);
+        if(gameManager.CanBuy(nextStoreCost))
+        {
+            storeCount += 1;
+            storeCountText.text = storeCount.ToString();
+            gameManager.AddToBalance(-nextStoreCost);
+            nextStoreCost = (baseStoreCost * Mathf.Pow(storeMultiplier, storeCount));
+            storeButtonCostText.text = "Buy " + nextStoreCost.ToString("C2");
+        }        
     }
     public void StoreOnClick ()
     {
-        if (!startTimer)
-            startTimer = true; 
+        if (storeCount == 1)
+        {
+           if (!startTimer)
+               startTimer = true;
+        }
+         
     }
 }

@@ -25,14 +25,13 @@ public class gameBoss : MonoBehaviour
         currentBalanceText.text = currentBalance.ToString("C2");
 
     }
-    public void SubtractFromBalance (float amount)
-    {
-        currentBalance -= amount;
-        currentBalanceText.text = currentBalance.ToString("C2");
-    }
 
-    public float CurrentBalance ()
+    public bool CanBuy (float amount)
     {
-        return currentBalance;
+        if (amount > currentBalance)
+            return false;
+        
+
+        return true;         
     }
 }
