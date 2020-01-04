@@ -10,9 +10,10 @@ public class Store : MonoBehaviour
     public float baseStoreCost;
     public float baseStoreProfit;
     public float storeTimer = 4f;
-    public bool isManagerUnlocked;
     public int storeCount;
     public float storeMultiplier;
+    public bool storeUnlocked;
+    public float unlockRequirements; 
 
     private bool startTimer;
     private float currentTimer = 0f;
@@ -21,7 +22,6 @@ public class Store : MonoBehaviour
     public Text storeCountText;
     public Slider progressSlider;
     public Text storeButtonCostText;
-    public gameBoss gameManager;
     public Button buyButton;
 
     void Start()
@@ -33,6 +33,9 @@ public class Store : MonoBehaviour
 
     void Update()
     {
+        if (storeCount >= 1)
+            startTimer = true;
+
         if (startTimer)
         {
             currentTimer += Time.deltaTime;
@@ -41,17 +44,29 @@ public class Store : MonoBehaviour
                 currentTimer = 0;                
                 startTimer = false;
                 float amount = baseStoreProfit * storeCount;
-                gameManager.AddToBalance(amount); 
-                if (isManagerUnlocked)                
-                    startTimer = true;                
+                gameBoss.instance.AddToBalance(amount); 
+                            
             }
         }
+        
         progressSlider.value = currentTimer / storeTimer;
         CheckStoreBuy();
     }
     public void CheckStoreBuy ()
     {
-        if(gameManager.CanBuy(nextStoreCost))
+        CanvasGroup cg = this.transform.GetComponent<CanvasGroup>();
+        if ( !storeUnlocked && gameBoss.instance.TotalEarnings() >= unlockRequirements)
+        {
+            
+            cg.interactable = true;
+            cg.alpha = 1;
+        }
+        else
+        {
+            cg.interactable = false;
+            cg.alpha = 0;
+        }
+        if(gameBoss.instance.CanBuy(nextStoreCost))
         {
             buyButton.interactable = true;
         } else
@@ -63,22 +78,13 @@ public class Store : MonoBehaviour
 
     public void BuyStoreOnClick ()
     {
-        if(gameManager.CanBuy(nextStoreCost))
+        if(gameBoss.instance.CanBuy(nextStoreCost))
         {
             storeCount += 1;
             storeCountText.text = storeCount.ToString();
-            gameManager.AddToBalance(-nextStoreCost);
+            gameBoss.instance.SubtractFromBalance(nextStoreCost);
             nextStoreCost = (baseStoreCost * Mathf.Pow(storeMultiplier, storeCount));
             storeButtonCostText.text = "Buy " + nextStoreCost.ToString("C2");
         }        
-    }
-    public void StoreOnClick ()
-    {
-        if (storeCount >= 1)
-        {
-           if (!startTimer)
-               startTimer = true;
-        }
-         
     }
 }

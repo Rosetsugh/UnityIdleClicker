@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2619031539269877554}
   - component: {fileID: 2619031539269877555}
   - component: {fileID: 2619031539269877553}
+  - component: {fileID: 3629318833362888761}
   m_Layer: 5
   m_Name: 'Archanist '
   m_TagString: Untagged
@@ -98,11 +99,25 @@ MonoBehaviour:
   isManagerUnlocked: 1
   storeCount: 0
   storeMultiplier: 1.15
+  storeUnlocked: 0
+  unlockRequirements: 0
   storeCountText: {fileID: 2619031539721512749}
   progressSlider: {fileID: 2619031539854064953}
   storeButtonCostText: {fileID: 2619031540743489165}
   gameManager: {fileID: 0}
   buyButton: {fileID: 2619031540792978759}
+--- !u!225 &3629318833362888761
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619031539269877557}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2619031539355734341
 GameObject:
   m_ObjectHideFlags: 0

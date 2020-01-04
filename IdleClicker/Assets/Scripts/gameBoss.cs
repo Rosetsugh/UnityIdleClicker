@@ -1,37 +1,64 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class gameBoss : MonoBehaviour
 {
+    public delegate void UpdateBalance();
+    public static event UpdateBalance OnUpdateBalance;
+
+    public static gameBoss instance; 
     private float currentBalance;
-    public Text currentBalanceText;
+    private float totalEarnings; 
 
     void Start()
     {
         currentBalance = 6.0f;
-        currentBalanceText.text = currentBalance.ToString("C2");
+        totalEarnings = currentBalance;
+        if (OnUpdateBalance != null)
+        {
+            OnUpdateBalance();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake ()
     {
-        
+        if (instance == null)
+            instance = this;
     }
+
     public void AddToBalance (float amount)
     {
         currentBalance += amount;
-        currentBalanceText.text = currentBalance.ToString("C2");
+        totalEarnings += amount;
+        if (OnUpdateBalance != null)
+        {
+            OnUpdateBalance();
+        }
+    }
 
+    public void SubtractFromBalance (float amount)
+    {
+        currentBalance -= amount;
+        if (OnUpdateBalance != null)
+        {
+            OnUpdateBalance(); 
+        }
+    }
+    public float TotalEarnings ()
+    {
+        return totalEarnings; 
     }
 
     public bool CanBuy (float amount)
     {
         if (amount > currentBalance)
-            return false;
-        
+            return false;        
 
         return true;         
+    }
+    public float GetCurrentBalance ()
+    {
+        return currentBalance;
     }
 }

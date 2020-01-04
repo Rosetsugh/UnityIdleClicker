@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 114429865286642268}
   - component: {fileID: 114429865286642269}
   - component: {fileID: 114429865286642271}
+  - component: {fileID: 4632020279108658667}
   m_Layer: 5
   m_Name: Blacksmith
   m_TagString: Untagged
@@ -278,11 +279,25 @@ MonoBehaviour:
   isManagerUnlocked: 1
   storeCount: 1
   storeMultiplier: 1.15
+  storeUnlocked: 0
+  unlockRequirements: 0
   storeCountText: {fileID: 114429864966599235}
   progressSlider: {fileID: 114429864834574423}
   storeButtonCostText: {fileID: 114429865958953955}
   gameManager: {fileID: 0}
   buyButton: {fileID: 114429866041997353}
+--- !u!225 &4632020279108658667
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114429865286642267}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &114429865409987627
 GameObject:
   m_ObjectHideFlags: 0

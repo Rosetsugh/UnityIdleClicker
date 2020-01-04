@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 4936614539351562196}
   - component: {fileID: 4936614539351562197}
   - component: {fileID: 4936614539351562199}
+  - component: {fileID: 1034337111560890417}
   m_Layer: 5
   m_Name: Herbalist
   m_TagString: Untagged
@@ -278,11 +279,25 @@ MonoBehaviour:
   isManagerUnlocked: 1
   storeCount: 0
   storeMultiplier: 1.15
+  storeUnlocked: 0
+  unlockRequirements: 0
   storeCountText: {fileID: 4936614538730049483}
   progressSlider: {fileID: 4936614538866202079}
   storeButtonCostText: {fileID: 4936614539755187819}
   gameManager: {fileID: 0}
   buyButton: {fileID: 4936614539806360993}
+--- !u!225 &1034337111560890417
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4936614539351562195}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4936614539375049123
 GameObject:
   m_ObjectHideFlags: 0
