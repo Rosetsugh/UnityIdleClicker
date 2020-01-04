@@ -17,10 +17,12 @@ public class Store : MonoBehaviour
 
     private bool startTimer;
     public float currentTimer = 0f;
-    public float nextStoreCost;    
+    private float nextStoreCost;
+
+   
 
     void Start()
-    {        
+    {
         nextStoreCost = baseStoreCost;
     }
 

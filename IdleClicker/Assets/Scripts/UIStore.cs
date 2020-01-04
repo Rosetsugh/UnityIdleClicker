@@ -9,28 +9,24 @@ public class UIStore : MonoBehaviour
     public Slider progressSlider;
     public Text storeButtonCostText;
     public Button buyButton;
-
-    private Store store; 
+    public Store store; 
 
     void Awake ()
     {
-        store = transform.GetComponent<Store>();
+        store = transform.GetComponent<Store>(); 
     }
-
 
     // Start is called before the first frame update
     void Start()
     {
         storeCountText.text = store.storeCount.ToString();
-        storeButtonCostText.text = store.nextStoreCost.ToString("C2");
-
+        storeButtonCostText.text = store.GetNextStoreCost().ToString("C2");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //progressSlider.value = store.GetCurrentTimer() / store.GetStoreTimer();
-        progressSlider.value = store.currentTimer / store.storeTimer;
+        progressSlider.value = store.GetCurrentTimer() / store.GetStoreTimer();
         UpdateUI();
     }
     public void UpdateUI()
@@ -39,7 +35,6 @@ public class UIStore : MonoBehaviour
         CanvasGroup cg = this.transform.GetComponent<CanvasGroup>();
         if (!store.storeUnlocked && gameBoss.instance.TotalEarnings() >= store.unlockRequirements)
         {
-
             cg.interactable = true;
             cg.alpha = 1;
         }
@@ -57,7 +52,6 @@ public class UIStore : MonoBehaviour
             buyButton.interactable = false;
         }
         storeCountText.text = store.storeCount.ToString();
-        storeButtonCostText.text = store.nextStoreCost.ToString("C2");
-
+        storeButtonCostText.text = store.GetNextStoreCost().ToString("C2");
     }
 }

@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 4936614539351562196}
   - component: {fileID: 4936614539351562197}
   - component: {fileID: 4936614539351562199}
-  - component: {fileID: 8848126037404947115}
+  - component: {fileID: 1300620391516483611}
   - component: {fileID: 1034337111560890417}
   m_Layer: 5
   m_Name: Herbalist
@@ -270,10 +270,8 @@ MonoBehaviour:
   storeMultiplier: 1.15
   storeUnlocked: 0
   unlockRequirements: 0
-  storeCountText: {fileID: 4936614538730049483}
-  storeButtonCostText: {fileID: 4936614539755187819}
-  buyButton: {fileID: 4936614539806360993}
---- !u!114 &8848126037404947115
+  currentTimer: 0
+--- !u!114 &1300620391516483611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
