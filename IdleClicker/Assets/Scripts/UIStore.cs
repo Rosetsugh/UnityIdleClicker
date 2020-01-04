@@ -23,7 +23,6 @@ public class UIStore : MonoBehaviour
         storeButtonCostText.text = store.GetNextStoreCost().ToString("C2");
     }
 
-    // Update is called once per frame
     void Update()
     {
         progressSlider.value = store.GetCurrentTimer() / store.GetStoreTimer();
