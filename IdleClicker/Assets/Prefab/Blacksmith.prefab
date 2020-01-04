@@ -87,18 +87,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114429865286642267}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &114429864966599233
@@ -193,6 +182,7 @@ GameObject:
   - component: {fileID: 114429865286642269}
   - component: {fileID: 114429865286642271}
   - component: {fileID: 4632020279108658667}
+  - component: {fileID: 5397761882197299309}
   m_Layer: 5
   m_Name: Blacksmith
   m_TagString: Untagged
@@ -276,15 +266,12 @@ MonoBehaviour:
   baseStoreCost: 2
   baseStoreProfit: 0.75
   storeTimer: 3
-  isManagerUnlocked: 1
   storeCount: 1
   storeMultiplier: 1.15
   storeUnlocked: 0
   unlockRequirements: 0
   storeCountText: {fileID: 114429864966599235}
-  progressSlider: {fileID: 114429864834574423}
   storeButtonCostText: {fileID: 114429865958953955}
-  gameManager: {fileID: 0}
   buyButton: {fileID: 114429866041997353}
 --- !u!225 &4632020279108658667
 CanvasGroup:
@@ -298,6 +285,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &5397761882197299309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114429865286642267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3119b066d2be3964fbd38504dab54604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeCountText: {fileID: 114429864966599235}
+  progressSlider: {fileID: 114429864834574423}
+  storeButtonCostText: {fileID: 114429865958953955}
+  buyButton: {fileID: 114429866041997353}
+  store: {fileID: 0}
 --- !u!1 &114429865409987627
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +636,7 @@ GameObject:
   - component: {fileID: 114429866283404472}
   - component: {fileID: 114429866283404474}
   - component: {fileID: 114429866283404475}
+  - component: {fileID: 2864529742924626544}
   m_Layer: 5
   m_Name: StoreTitle
   m_TagString: Untagged
@@ -702,6 +707,23 @@ MonoBehaviour:
   m_Text: 'Blacksmith
 
 '
+--- !u!114 &2864529742924626544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114429866283404473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3119b066d2be3964fbd38504dab54604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeCountText: {fileID: 0}
+  progressSlider: {fileID: 0}
+  storeButtonCostText: {fileID: 0}
+  buyButton: {fileID: 0}
+  store: {fileID: 0}
 --- !u!1 &114429866351314653
 GameObject:
   m_ObjectHideFlags: 0

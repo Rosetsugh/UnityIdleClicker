@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2619031539269877554}
   - component: {fileID: 2619031539269877555}
   - component: {fileID: 2619031539269877553}
+  - component: {fileID: 2728082253262743816}
   - component: {fileID: 3629318833362888761}
   m_Layer: 5
   m_Name: 'Archanist '
@@ -96,16 +97,30 @@ MonoBehaviour:
   baseStoreCost: 2
   baseStoreProfit: 0.75
   storeTimer: 3
-  isManagerUnlocked: 1
   storeCount: 0
   storeMultiplier: 1.15
   storeUnlocked: 0
   unlockRequirements: 0
   storeCountText: {fileID: 2619031539721512749}
+  storeButtonCostText: {fileID: 2619031540743489165}
+  buyButton: {fileID: 2619031540792978759}
+--- !u!114 &2728082253262743816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619031539269877557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3119b066d2be3964fbd38504dab54604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeCountText: {fileID: 2619031539721512749}
   progressSlider: {fileID: 2619031539854064953}
   storeButtonCostText: {fileID: 2619031540743489165}
-  gameManager: {fileID: 0}
   buyButton: {fileID: 2619031540792978759}
+  store: {fileID: 0}
 --- !u!225 &3629318833362888761
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -358,18 +373,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2619031539269877557}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2619031540255308387
