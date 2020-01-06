@@ -1,4 +1,15 @@
-<store>
+<gamedata>
+  <store>
+    <name>Blacksmith</name>
+    <baseStoreCost>1.5</baseStoreCost>
+    <baseStoreProfit>2</baseStoreProfit> 
+  </store>
+  <store>
+    <name>JewelCrafter</name>
+    <baseStoreCost>1.5</baseStoreCost>
+    <baseStoreProfit>2</baseStoreProfit>
+  </store>
 
 
-</store>
+</gamedata>
+  

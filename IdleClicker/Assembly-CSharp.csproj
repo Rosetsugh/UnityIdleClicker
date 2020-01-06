@@ -59,11 +59,12 @@
      <Compile Include="Assets\Scripts\gameBoss.cs" />
      <Compile Include="Assets\Scripts\HeroData.cs" />
      <Compile Include="Assets\Scripts\HeroUI.cs" />
+     <Compile Include="Assets\Scripts\LoadGameData.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Store.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\UIStore.cs" />
-     <None Include="Assets\Data\GameData.xml.txt" />
+     <None Include="Assets\Data\GameData.xml" />
      <None Include="Assets\Tiny Fantasy Icons\README.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Git/UnityIdleClicker/UnityIdleClicker/IdleClicker/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
