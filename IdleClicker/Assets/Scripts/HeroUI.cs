@@ -7,7 +7,6 @@ public class HeroUI : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public int strVal, intVal, dexVal, conVal;
     private string heroName;
     public Text heroNameBox; 
     public Text strBox;
@@ -15,18 +14,17 @@ public class HeroUI : MonoBehaviour
     public Text dexBox;
     public Text conBox;
     public Text combatPowerBox; 
-    int combatPower; 
+
 
     void Start()
     {
-        combatPower = strVal + intVal + dexVal + conVal;
-        heroName = DetermineHeroName(combatPower);
+        heroName = DetermineHeroName(HeroData.hero.GetCombatPower());
         heroNameBox.text = heroName;
-        strBox.text = strVal.ToString();
-        intBox.text = intVal.ToString();
-        dexBox.text = dexVal.ToString();
-        conBox.text = conVal.ToString();
-        combatPowerBox.text = "Combat Power: " + combatPower; 
+        strBox.text = HeroData.hero.GetHeroStr().ToString();
+        intBox.text = HeroData.hero.GetHeroInt().ToString();
+        dexBox.text = HeroData.hero.GetHeroDex().ToString();
+        conBox.text = HeroData.hero.GetHeroCon().ToString(); 
+        combatPowerBox.text = "Combat Power: " + HeroData.hero.GetCombatPower(); 
     }
 
     // Update is called once per frame

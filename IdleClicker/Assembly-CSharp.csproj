@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\scrip.cs" />
      <Compile Include="Assets\Scripts\gameBoss.cs" />
+     <Compile Include="Assets\Scripts\HeroData.cs" />
      <Compile Include="Assets\Scripts\HeroUI.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Store.cs" />
