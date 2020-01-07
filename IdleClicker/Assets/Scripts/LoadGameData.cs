@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class LoadGameData : MonoBehaviour
 {
-    public TextAsset GameData; 
+    public TextAsset GameData;
+    public GameObject StorePrefab;
+    public GameObject StorePanel; 
 
     public void Start ()
     {
@@ -22,8 +24,44 @@ public class LoadGameData : MonoBehaviour
 
         foreach (XmlNode StoreInfo in StoreList)
         {
-            Debug.Log(StoreInfo.InnerText);
-            Debug.Log(StoreInfo.Name);
+            GameObject NewStore = (GameObject)Instantiate(StorePrefab);
+            Store storeobj = NewStore.GetComponent<Store>(); 
+
+            XmlNodeList StoreNodes = StoreInfo.ChildNodes;
+            foreach (XmlNode StoreNode in StoreNodes)
+            {
+                if (StoreNode.Name == "baseStoreProfit")
+                {
+                    storeobj.baseStoreProfit = float.Parse(StoreNode.InnerText); 
+                } 
+                else if (StoreNode.Name == "baseStoreCost")
+                {
+                    storeobj.baseStoreCost = float.Parse(StoreNode.InnerText); 
+                } 
+                else if (StoreNode.Name == "name")
+                {
+                    storeobj.name = StoreNode.InnerText;
+                   
+                } 
+                else if (StoreNode.Name == "storeCount")
+                {
+                    storeobj.storeCount = int.Parse(StoreNode.InnerText);
+                } 
+                else if (StoreNode.Name == "storeMultiplier") 
+                {
+                    storeobj.storeMultiplier =  float.Parse(StoreNode.InnerText);
+                } 
+                else if (StoreNode.Name == "unlockRequirements")
+                {
+                    storeobj.unlockRequirements = float.Parse(StoreNode.InnerText);
+                }
+                else if (StoreNode.Name == "storeUnlocked")
+                {
+                    storeobj.storeUnlocked = bool.Parse(StoreNode.InnerText);
+                }
+
+            }
+            NewStore.transform.SetParent(StorePanel.transform); 
         }
     }
 }

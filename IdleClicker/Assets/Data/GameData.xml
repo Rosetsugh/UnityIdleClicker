@@ -1,13 +1,22 @@
 <gamedata>
   <store>
     <name>Blacksmith</name>
-    <baseStoreCost>1.5</baseStoreCost>
+    <baseStoreCost>4.5</baseStoreCost>
     <baseStoreProfit>2</baseStoreProfit> 
+    <storeCount>0</storeCount>
+    <storeMultiplier>1.15</storeMultiplier>
+    <unlockRequirements>0</unlockRequirements>
+    <storeUnlocked>false</storeUnlocked>
   </store>
   <store>
     <name>JewelCrafter</name>
-    <baseStoreCost>1.5</baseStoreCost>
-    <baseStoreProfit>2</baseStoreProfit>
+    <baseStoreCost>5.111</baseStoreCost>
+    <baseStoreProfit>15</baseStoreProfit>
+    <storeCount>0</storeCount>
+    <storeMultiplier>1.15</storeMultiplier>
+    <unlockRequirements>50</unlockRequirements>
+    <storeUnlocked>false</storeUnlocked>
+
   </store>
 
 
