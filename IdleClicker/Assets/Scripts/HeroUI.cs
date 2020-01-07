@@ -13,7 +13,9 @@ public class HeroUI : MonoBehaviour
     public Text intBox;
     public Text dexBox;
     public Text conBox;
-    public Text combatPowerBox; 
+    public Text combatPowerBox;
+    public Button strBtn, conBtn, intBtn, dexBtn;
+    public Text strBtnText, conBtnText, intBtnText, dexBtnText;
 
 
     void Start()
@@ -45,5 +47,26 @@ public class HeroUI : MonoBehaviour
         }
         return name; 
     }
+    public void StrButtonClick ()
+    {
+        HeroData.hero.IncreaseStr();
+        strBox.text = HeroData.hero.GetHeroStr().ToString();
+        strBtnText.text = HeroData.hero.strExpReq.ToString();
+    }
+    public void DexButtonClick()
+    {
+        HeroData.hero.IncreaseDex();
+        dexBox.text = HeroData.hero.GetHeroDex().ToString();
+        dexBtnText.text = HeroData.hero.dexExpReq.ToString();
+    }
+    public void IntButtonClick()
+    {
+        HeroData.hero.IncreaseInt();
+    }
+    public void ConButtonClick()
+    {
+        HeroData.hero.IncreaseCon();
+    }
+
 
 }

@@ -21,8 +21,7 @@ public class gameBoss : MonoBehaviour
         if (OnUpdateBalance != null)
         {
             OnUpdateBalance();
-        }
-        
+        }        
     }
 
     void Awake ()
@@ -78,5 +77,9 @@ public class gameBoss : MonoBehaviour
     public float GetCurrentExp ()
     {
         return currentExp;
+    }
+    public void ReduceCurrentExp (float amount)
+    {
+        currentExp -= amount;
     }
 }
