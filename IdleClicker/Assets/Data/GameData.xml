@@ -2,11 +2,12 @@
   <store>
     <name>Blacksmith</name>
     <baseStoreCost>4.5</baseStoreCost>
-    <baseStoreProfit>2</baseStoreProfit> 
+    <baseStoreProfit>5</baseStoreProfit> 
     <storeCount>0</storeCount>
     <storeMultiplier>1.15</storeMultiplier>
     <unlockRequirements>0</unlockRequirements>
     <storeUnlocked>false</storeUnlocked>
+    <storeTimer>3</storeTimer>
   </store>
   <store>
     <name>JewelCrafter</name>
@@ -14,11 +15,79 @@
     <baseStoreProfit>15</baseStoreProfit>
     <storeCount>0</storeCount>
     <storeMultiplier>1.15</storeMultiplier>
-    <unlockRequirements>50</unlockRequirements>
+    <unlockRequirements>0</unlockRequirements>
     <storeUnlocked>false</storeUnlocked>
-
+    <storeTimer>5</storeTimer>
   </store>
-
-
+  <store>
+      <name>Miner</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+    </store>
+  <store>
+      <name>Herbalist</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+    </store>
+  <store>
+      <name>Hunter</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+    </store>
+  <store>
+      <name>Alchemist</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+    </store>
+  <store>
+      <name>JewelCrafter</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+    </store>
+  <store>
+      <name>JewelCrafter</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+    </store>
+  <store>
+      <name>JewelCrafter</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+    </store>
 </gamedata>
   

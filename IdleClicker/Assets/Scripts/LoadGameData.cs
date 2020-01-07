@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadGameData : MonoBehaviour
 {
     public TextAsset GameData;
-    public GameObject StorePrefab;
+    public GameObject StorePrefabBlackSmith;
     public GameObject StorePanel; 
 
     public void Start ()
     {
-        Invoke("LoadData", .1f); 
+        LoadData();
+        //Invoke("LoadData", .1f); 
     }
 
 
@@ -24,13 +26,19 @@ public class LoadGameData : MonoBehaviour
 
         foreach (XmlNode StoreInfo in StoreList)
         {
-            GameObject NewStore = (GameObject)Instantiate(StorePrefab);
+            GameObject NewStore = (GameObject)Instantiate(StorePrefabBlackSmith);
             Store storeobj = NewStore.GetComponent<Store>(); 
 
             XmlNodeList StoreNodes = StoreInfo.ChildNodes;
             foreach (XmlNode StoreNode in StoreNodes)
             {
-                if (StoreNode.Name == "baseStoreProfit")
+                if (StoreNode.Name == "name")
+                {
+                    string SetName = StoreNode.InnerText;
+                    Text storeText = storeobj.transform.Find("StoreNameText").GetComponent<Text>();
+                    storeText.text = SetName;
+                }
+                else if (StoreNode.Name == "baseStoreProfit")
                 {
                     storeobj.baseStoreProfit = float.Parse(StoreNode.InnerText); 
                 } 
@@ -58,6 +66,10 @@ public class LoadGameData : MonoBehaviour
                 else if (StoreNode.Name == "storeUnlocked")
                 {
                     storeobj.storeUnlocked = bool.Parse(StoreNode.InnerText);
+                }
+                else if (StoreNode.Name == "storeTimer")
+                {
+                    storeobj.storeTimer = float.Parse(StoreNode.InnerText);
                 }
 
             }
