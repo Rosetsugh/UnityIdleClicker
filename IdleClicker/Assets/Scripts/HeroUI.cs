@@ -23,7 +23,8 @@ public class HeroUI : MonoBehaviour
         strBox.text = HeroData.hero.GetHeroStr().ToString();
         intBox.text = HeroData.hero.GetHeroInt().ToString();
         dexBox.text = HeroData.hero.GetHeroDex().ToString();
-        conBox.text = HeroData.hero.GetHeroCon().ToString(); 
+        conBox.text = HeroData.hero.GetHeroCon().ToString();
+        HeroData.hero.UpdateCombatPower(); 
         combatPowerBox.text = "Combat Power: " + HeroData.hero.GetCombatPower(); 
     }
 
