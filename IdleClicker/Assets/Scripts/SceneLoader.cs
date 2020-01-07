@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadCharacterScene ()
-    {
-        DontDestroyOnLoad(gameBoss.instance.transform); 
-        SceneManager.LoadScene(0);
 
-    }
-    public void LoadIdleTrainingScene ()
+    public GameObject idlePanel;
+    public GameObject characterPanel; 
+
+    public void LoadCharacterPanel ()
     {
-        DontDestroyOnLoad(gameBoss.instance.transform);
-        SceneManager.LoadScene(1);
+        characterPanel.gameObject.SetActive(true);
+        idlePanel.gameObject.SetActive(false);
+    }
+    public void LoadIdlePanel ()
+    {
+        characterPanel.gameObject.SetActive(false);
+        idlePanel.gameObject.SetActive(true);
     }
     public void Quit ()
     {
