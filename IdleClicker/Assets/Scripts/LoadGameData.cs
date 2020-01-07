@@ -94,6 +94,10 @@ public class LoadGameData : MonoBehaviour
                 {
                     storeobj.storeTimer = float.Parse(StoreNode.InnerText);
                 }
+                else if (StoreNode.Name == "storeExp")
+                {
+                    storeobj.storeExp = float.Parse(StoreNode.InnerText);
+                }
             }
             NewStore.transform.SetParent(StorePanel.transform);
         }

@@ -9,6 +9,7 @@
     <storeUnlocked>false</storeUnlocked>
     <storeTimer>3</storeTimer>
     <image>blacksmith</image>
+    <storeExp>1</storeExp>
   </store>
   <store>
     <name>JewelCrafter</name>
@@ -19,7 +20,8 @@
     <unlockRequirements>0</unlockRequirements>
     <storeUnlocked>false</storeUnlocked>
     <storeTimer>5</storeTimer>
-     <image>jewelcrafter</image>
+    <image>jewelcrafter</image>
+    <storeExp>1</storeExp>
   </store>
   <store>
       <name>Miner</name>
@@ -31,6 +33,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
       <image>miner</image>
+      <storeExp>1</storeExp>
     </store>
   <store>
       <name>Herbalist</name>
@@ -42,6 +45,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
       <image>herbalist</image>
+      <storeExp>1</storeExp>
     </store>
   <store>
       <name>Hunter</name>
@@ -53,6 +57,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
       <image>hunter</image>
+      <storeExp>1</storeExp>
     </store>
   <store>
       <name>Healer</name>
@@ -64,6 +69,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
       <image>healer</image>
+      <storeExp>1</storeExp>
     </store>
   <store>
       <name>Archanist</name>
@@ -75,6 +81,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
       <image>archanist</image>
+      <storeExp>1</storeExp>
     </store>
   <store>
       <name>Sage</name>
@@ -86,6 +93,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>  
       <image>sage</image>
+      <storeExp>1</storeExp>
     </store>
   <store>
       <name>Alchemist</name>
@@ -97,6 +105,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
       <image>alchemist</image>
+      <storeExp>1</storeExp>
     </store>
 </gamedata>
   
