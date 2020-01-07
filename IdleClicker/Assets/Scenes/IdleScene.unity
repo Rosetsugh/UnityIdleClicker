@@ -590,8 +590,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.2999878, y: -10.200012}
-  m_SizeDelta: {x: -139.3, y: -112.2}
+  m_AnchoredPosition: {x: -1.8999939, y: -10.200012}
+  m_SizeDelta: {x: -147.7, y: -112.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430874929
 MonoBehaviour:
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -711,7 +711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameData: {fileID: 4900000, guid: ef6f945c60d196041b6d3143392b5a73, type: 3}
-  StorePrefab: {fileID: 114429865286642267, guid: e6d9e71bc6c9fa1409919a0455a0093f,
+  StorePrefabBlackSmith: {fileID: 114429865286642267, guid: e6d9e71bc6c9fa1409919a0455a0093f,
+    type: 3}
+  StorePrefabHerbalist: {fileID: 4936614539351562195, guid: 4e75eef8308a7334e8901a81887e0751,
+    type: 3}
+  StorePrefabAlchemist: {fileID: 2619031539269877557, guid: 73e3ad8b203360d4fa197c3ce00d97b8,
     type: 3}
   StorePanel: {fileID: 1430874927}
 --- !u!224 &1942870864 stripped

@@ -5,9 +5,12 @@ using UnityEngine;
 public class gameBoss : MonoBehaviour
 {
     public delegate void UpdateBalance();
+    public delegate void UpdateExp();
+    public static event UpdateExp OnUpdateExp;
     public static event UpdateBalance OnUpdateBalance;
 
-    public static gameBoss instance; 
+    public static gameBoss instance;
+    private float currentExp; 
     private float currentBalance;
     private float totalEarnings; 
 
@@ -19,6 +22,7 @@ public class gameBoss : MonoBehaviour
         {
             OnUpdateBalance();
         }
+        
     }
 
     void Awake ()
@@ -27,22 +31,32 @@ public class gameBoss : MonoBehaviour
             instance = this;
     }
 
-    public void AddToBalance (float amount)
+    public void AddToBalance (float amount, float exp)
     {
         currentBalance += amount;
         totalEarnings += amount;
+        currentExp += exp;
         if (OnUpdateBalance != null)
         {
             OnUpdateBalance();
         }
+        if (OnUpdateExp != null)
+        {
+            OnUpdateExp();
+        }
     }
 
-    public void SubtractFromBalance (float amount)
+    public void SubtractFromBalance (float amount, float exp)
     {
         currentBalance -= amount;
+        currentExp -= exp;
         if (OnUpdateBalance != null)
         {
             OnUpdateBalance(); 
+        }
+        if (OnUpdateExp != null)
+        {
+            OnUpdateExp();
         }
     }
     public float TotalEarnings ()
@@ -60,5 +74,9 @@ public class gameBoss : MonoBehaviour
     public float GetCurrentBalance ()
     {
         return currentBalance;
+    }
+    public float GetCurrentExp ()
+    {
+        return currentExp;
     }
 }

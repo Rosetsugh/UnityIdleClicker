@@ -13,7 +13,8 @@ public class Store : MonoBehaviour
     public int storeCount;
     public float storeMultiplier;
     public bool storeUnlocked;
-    public float unlockRequirements; 
+    public float unlockRequirements;
+    public float storeExp; 
 
     private bool startTimer;
     public float currentTimer = 0f;
@@ -39,7 +40,8 @@ public class Store : MonoBehaviour
                 currentTimer = 0;                
                 startTimer = false;
                 float amount = baseStoreProfit * storeCount;
-                gameBoss.instance.AddToBalance(amount);                             
+                float exp = storeExp * storeCount;
+                gameBoss.instance.AddToBalance(amount, exp);                             
             }
         }
     } 
@@ -50,7 +52,7 @@ public class Store : MonoBehaviour
         if(gameBoss.instance.CanBuy(nextStoreCost))
         {
             storeCount += 1;
-            gameBoss.instance.SubtractFromBalance(nextStoreCost);
+            gameBoss.instance.SubtractFromBalance(nextStoreCost, 0);
             nextStoreCost = (baseStoreCost * Mathf.Pow(storeMultiplier, storeCount));
         }        
     }
