@@ -8,6 +8,7 @@
     <unlockRequirements>0</unlockRequirements>
     <storeUnlocked>false</storeUnlocked>
     <storeTimer>3</storeTimer>
+    <image>blacksmith</image>
   </store>
   <store>
     <name>JewelCrafter</name>
@@ -18,6 +19,7 @@
     <unlockRequirements>0</unlockRequirements>
     <storeUnlocked>false</storeUnlocked>
     <storeTimer>5</storeTimer>
+     <image>jewelcrafter</image>
   </store>
   <store>
       <name>Miner</name>
@@ -28,6 +30,7 @@
       <unlockRequirements>0</unlockRequirements>
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
+      <image>miner</image>
     </store>
   <store>
       <name>Herbalist</name>
@@ -38,6 +41,7 @@
       <unlockRequirements>0</unlockRequirements>
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
+      <image>herbalist</image>
     </store>
   <store>
       <name>Hunter</name>
@@ -48,6 +52,40 @@
       <unlockRequirements>0</unlockRequirements>
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
+      <image>hunter</image>
+    </store>
+  <store>
+      <name>Healer</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+      <image>healer</image>
+    </store>
+  <store>
+      <name>Archanist</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>
+      <image>archanist</image>
+    </store>
+  <store>
+      <name>Sage</name>
+      <baseStoreCost>5.111</baseStoreCost>
+      <baseStoreProfit>15</baseStoreProfit>
+      <storeCount>0</storeCount>
+      <storeMultiplier>1.15</storeMultiplier>
+      <unlockRequirements>0</unlockRequirements>
+      <storeUnlocked>false</storeUnlocked>
+      <storeTimer>5</storeTimer>  
+      <image>sage</image>
     </store>
   <store>
       <name>Alchemist</name>
@@ -58,36 +96,7 @@
       <unlockRequirements>0</unlockRequirements>
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
-    </store>
-  <store>
-      <name>JewelCrafter</name>
-      <baseStoreCost>5.111</baseStoreCost>
-      <baseStoreProfit>15</baseStoreProfit>
-      <storeCount>0</storeCount>
-      <storeMultiplier>1.15</storeMultiplier>
-      <unlockRequirements>0</unlockRequirements>
-      <storeUnlocked>false</storeUnlocked>
-      <storeTimer>5</storeTimer>
-    </store>
-  <store>
-      <name>JewelCrafter</name>
-      <baseStoreCost>5.111</baseStoreCost>
-      <baseStoreProfit>15</baseStoreProfit>
-      <storeCount>0</storeCount>
-      <storeMultiplier>1.15</storeMultiplier>
-      <unlockRequirements>0</unlockRequirements>
-      <storeUnlocked>false</storeUnlocked>
-      <storeTimer>5</storeTimer>
-    </store>
-  <store>
-      <name>JewelCrafter</name>
-      <baseStoreCost>5.111</baseStoreCost>
-      <baseStoreProfit>15</baseStoreProfit>
-      <storeCount>0</storeCount>
-      <storeMultiplier>1.15</storeMultiplier>
-      <unlockRequirements>0</unlockRequirements>
-      <storeUnlocked>false</storeUnlocked>
-      <storeTimer>5</storeTimer>
+      <image>alchemist</image>
     </store>
 </gamedata>
   

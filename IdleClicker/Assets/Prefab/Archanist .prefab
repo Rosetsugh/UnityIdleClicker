@@ -42,7 +42,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.59922636, y: 0.66800004}
   m_AnchorMax: {x: 0.85, y: 0.86058724}
-  m_AnchoredPosition: {x: -1.3699802, y: 0.8790016}
+  m_AnchoredPosition: {x: -1.3699646, y: 0.8789978}
   m_SizeDelta: {x: 1, y: 2.600399}
   m_Pivot: {x: 0.50000006, y: 0.5}
 --- !u!222 &2619031539269877554
@@ -239,7 +239,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07341642, y: 0.09337448}
   m_AnchorMax: {x: 0.3264135, y: 0.40462554}
-  m_AnchoredPosition: {x: 0.48400116, y: -1.3350005}
+  m_AnchoredPosition: {x: 0.4840088, y: -1.3349991}
   m_SizeDelta: {x: -1.3399963, y: 2}
   m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!222 &2619031539721512748
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 2619031540484938196}
   - component: {fileID: 2619031540484938197}
   m_Layer: 5
-  m_Name: StoreTitle
+  m_Name: StoreNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
