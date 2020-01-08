@@ -39,8 +39,8 @@ public class HeroUI : MonoBehaviour
     {
         HeroData.hero.UpdateCombatPower();
         combatPowerBox.text = "Combat Power:" + HeroData.hero.GetCombatPower().ToString();
+        heroNameBox.text = DetermineHeroName(HeroData.hero.GetCombatPower());
         currentHeroExp.text = gameBoss.instance.GetCurrentExp().ToString();
-
     }
     private string DetermineHeroName (int powah)
     {

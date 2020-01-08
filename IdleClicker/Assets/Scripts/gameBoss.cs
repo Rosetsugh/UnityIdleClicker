@@ -10,6 +10,7 @@ public class gameBoss : MonoBehaviour
     public static event UpdateBalance OnUpdateBalance;
 
     public static gameBoss instance;
+    private int currentStage = 1;
     private float currentExp; 
     private float currentBalance;
     private float totalEarnings; 
@@ -82,4 +83,18 @@ public class gameBoss : MonoBehaviour
     {
         currentExp -= amount;
     }
+    public int GetCurrentStage ()
+    {
+        return currentStage; 
+    }
+    public void IncreaseStage ()
+    {
+        currentStage += 1;
+    }
+    public void ResetStage ()
+    {
+        currentStage = 1;
+    }
+
+
 }
