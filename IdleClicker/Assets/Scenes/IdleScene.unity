@@ -436,19 +436,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroNameBox: {fileID: 249340356}
+  currentHeroExp: {fileID: 429126964}
   strBox: {fileID: 1371172266}
   intBox: {fileID: 1076889720}
   dexBox: {fileID: 472502741}
   conBox: {fileID: 264248071}
   combatPowerBox: {fileID: 1650447870}
+  strBtnText: {fileID: 1583540582}
+  conBtnText: {fileID: 1895583893}
+  intBtnText: {fileID: 1989939127}
+  dexBtnText: {fileID: 1952244233}
   strBtn: {fileID: 2130135074}
   conBtn: {fileID: 426339160}
   intBtn: {fileID: 1356778263}
   dexBtn: {fileID: 1915736927}
-  strBtnText: {fileID: 1583540582}
-  conBtnText: {fileID: 1989939127}
-  intBtnText: {fileID: 1895583893}
-  dexBtnText: {fileID: 1952244233}
 --- !u!114 &416826835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,15 +462,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94774c0a2fd1c0545a9032cd33c37398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strVal: 0
-  intVal: 0
-  dexVal: 0
-  conVal: 0
-  strExpReq: 0
-  intExpReq: 0
-  dexExpReq: 0
-  conExpReq: 0
-  expMult: 0
+  strVal: 10
+  intVal: 10
+  dexVal: 10
+  conVal: 10
+  strExpReq: 100
+  intExpReq: 100
+  dexExpReq: 100
+  conExpReq: 100
+  expMult: 1.1
 --- !u!4 &416826836
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,16 +1256,51 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 416826834}
+    - target: {fileID: 8277783694536469265, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
+        type: 3}
+      propertyPath: m_Name
+      value: intButton
+      objectReference: {fileID: 0}
     - target: {fileID: 344216430960905058, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 416826834}
+    - target: {fileID: 344216430960905058, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IntButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970206385747375915, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
+        type: 3}
+      propertyPath: m_Name
+      value: intButtonText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420236091286478828, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
+        type: 3}
+      propertyPath: m_Name
+      value: conButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602650910031515872, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 416826834}
     - target: {fileID: 3602650910031515872, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 416826834}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ConButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 879006049217084837, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
+        type: 3}
+      propertyPath: m_Name
+      value: conButtonText
+      objectReference: {fileID: 0}
+    - target: {fileID: 2327352727406272114, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3b4e5da05bc3d046aa4a1daa30eb7ac, type: 3}
 --- !u!1001 &5859349815977006521

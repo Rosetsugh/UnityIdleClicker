@@ -8,14 +8,10 @@ public class HeroUI : MonoBehaviour
     // Start is called before the first frame update
 
     private string heroName;
-    public Text heroNameBox; 
-    public Text strBox;
-    public Text intBox;
-    public Text dexBox;
-    public Text conBox;
-    public Text combatPowerBox;
+    public Text heroNameBox, currentHeroExp;
+    public Text strBox, intBox, dexBox, conBox, combatPowerBox, strBtnText, conBtnText, intBtnText, dexBtnText;
     public Button strBtn, conBtn, intBtn, dexBtn;
-    public Text strBtnText, conBtnText, intBtnText, dexBtnText;
+    
 
 
     void Start()
@@ -27,13 +23,24 @@ public class HeroUI : MonoBehaviour
         dexBox.text = HeroData.hero.GetHeroDex().ToString();
         conBox.text = HeroData.hero.GetHeroCon().ToString();
         HeroData.hero.UpdateCombatPower(); 
-        combatPowerBox.text = "Combat Power: " + HeroData.hero.GetCombatPower(); 
+        combatPowerBox.text = "Combat Power: " + HeroData.hero.GetCombatPower();
+        strBtnText.text = HeroData.hero.strExpReq.ToString();
+        dexBtnText.text = HeroData.hero.dexExpReq.ToString();
+        conBtnText.text = HeroData.hero.conExpReq.ToString();
+        intBtnText.text = HeroData.hero.intExpReq.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    void UpdateData ()
+    {
+        HeroData.hero.UpdateCombatPower();
+        combatPowerBox.text = "Combat Power:" + HeroData.hero.GetCombatPower().ToString();
+        currentHeroExp.text = gameBoss.instance.GetCurrentExp().ToString();
+
     }
     private string DetermineHeroName (int powah)
     {
@@ -52,20 +59,28 @@ public class HeroUI : MonoBehaviour
         HeroData.hero.IncreaseStr();
         strBox.text = HeroData.hero.GetHeroStr().ToString();
         strBtnText.text = HeroData.hero.strExpReq.ToString();
+        UpdateData();
     }
     public void DexButtonClick()
     {
         HeroData.hero.IncreaseDex();
         dexBox.text = HeroData.hero.GetHeroDex().ToString();
         dexBtnText.text = HeroData.hero.dexExpReq.ToString();
+        UpdateData();
     }
     public void IntButtonClick()
     {
         HeroData.hero.IncreaseInt();
+        intBox.text = HeroData.hero.GetHeroInt().ToString();
+        intBtnText.text = HeroData.hero.intExpReq.ToString();
+        UpdateData();
     }
     public void ConButtonClick()
     {
         HeroData.hero.IncreaseCon();
+        conBox.text = HeroData.hero.GetHeroCon().ToString();
+        conBtnText.text = HeroData.hero.conExpReq.ToString();
+        UpdateData();
     }
 
 

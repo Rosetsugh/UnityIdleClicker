@@ -9,7 +9,7 @@
     <storeUnlocked>false</storeUnlocked>
     <storeTimer>3</storeTimer>
     <image>blacksmith</image>
-    <storeExp>1</storeExp>
+    <storeExp>50</storeExp>
   </store>
   <store>
     <name>JewelCrafter</name>
@@ -21,7 +21,7 @@
     <storeUnlocked>false</storeUnlocked>
     <storeTimer>5</storeTimer>
     <image>jewelcrafter</image>
-    <storeExp>1</storeExp>
+    <storeExp>50</storeExp>
   </store>
   <store>
       <name>Miner</name>
@@ -45,7 +45,7 @@
       <storeUnlocked>false</storeUnlocked>
       <storeTimer>5</storeTimer>
       <image>herbalist</image>
-      <storeExp>1</storeExp>
+      <storeExp>50</storeExp>
     </store>
   <store>
       <name>Hunter</name>

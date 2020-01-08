@@ -10,6 +10,12 @@ public class SceneLoader : MonoBehaviour
     public GameObject idlePanel;
     public GameObject characterPanel; 
 
+    void Start ()
+    {
+        characterPanel.gameObject.SetActive(true);
+        idlePanel.gameObject.SetActive(false);
+    }
+
     public void LoadCharacterPanel ()
     {
         characterPanel.gameObject.SetActive(true);
