@@ -9,6 +9,7 @@ public class HeroData : MonoBehaviour
     public float expMult; 
     private int increaseVal = 1;
     private int combatPower;
+    private float heroHealth; 
     public static HeroData hero; 
 
     void Awake ()
@@ -24,17 +25,14 @@ public class HeroData : MonoBehaviour
     void Start()
     {
         UpdateCombatPower();
+        heroHealth = CalculateHeroHealth(); 
     }
     public void UpdateCombatPower ()
     {
         combatPower = strVal + intVal + dexVal + conVal; 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
     public int GetHeroStr ()
     {
         return strVal;
@@ -92,5 +90,16 @@ public class HeroData : MonoBehaviour
     public int GetCombatPower ()
     {
         return combatPower; 
+    }
+
+    public float GetHeroHealth ()
+    {
+        return heroHealth; 
+    }
+
+
+    public float CalculateHeroHealth ()
+    {
+        return 5 * conVal; 
     }
 }

@@ -56,10 +56,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scrip.cs" />
+     <Compile Include="Assets\Scripts\BattleProcessor.cs" />
      <Compile Include="Assets\Scripts\gameBoss.cs" />
      <Compile Include="Assets\Scripts\HeroData.cs" />
      <Compile Include="Assets\Scripts\HeroUI.cs" />
      <Compile Include="Assets\Scripts\LoadGameData.cs" />
+     <Compile Include="Assets\Scripts\MonsterData.cs" />
      <Compile Include="Assets\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Scripts\Store.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
