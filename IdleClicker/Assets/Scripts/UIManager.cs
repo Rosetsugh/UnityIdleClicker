@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    
+
+
     public Text currentBalanceText;
     public Text generatedExpText;
 

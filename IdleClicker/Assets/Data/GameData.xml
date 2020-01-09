@@ -2,14 +2,14 @@
   <store>
     <name>Blacksmith</name>
     <baseStoreCost>4.5</baseStoreCost>
-    <baseStoreProfit>5</baseStoreProfit> 
+    <baseStoreProfit>100000</baseStoreProfit> 
     <storeCount>0</storeCount>
     <storeMultiplier>1.15</storeMultiplier>
     <unlockRequirements>0</unlockRequirements>
     <storeUnlocked>false</storeUnlocked>
-    <storeTimer>3</storeTimer>
+    <storeTimer>1</storeTimer>
     <image>blacksmith</image>
-    <storeExp>50</storeExp>
+    <storeExp>10000</storeExp>
   </store>
   <store>
     <name>JewelCrafter</name>
